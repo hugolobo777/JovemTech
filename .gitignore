@@ -1,0 +1,37 @@
+# Arquivos de sistema e ambiente
+.DS_Store
+Thumbs.db
+*.log
+
+# VS Code e configurações de editores
+.vscode/
+.idea/
+*.swp
+
+# Python (caches e ambientes virtuais)
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+*.env
+
+# C / C++ (binários e objetos compilados)
+*.o
+*.obj
+*.exe
+*.out
+*.app
+
+# Java / JVM (classes e pacotes)
+*.class
+*.jar
+*.war
+target/
+.gradle/
+build/
+
+# Pacotes e dependências (Node/JS se usar)
+node_modules/
+dist/

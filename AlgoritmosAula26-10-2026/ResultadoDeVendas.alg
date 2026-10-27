@@ -1,7 +1,7 @@
 algoritmo "ResultadoDeVendas"
 
 var
-vendasJan, vendasFev, vendasMar, totalVendas: real
+vendasJan, vendasFev, vendasMar, totalVendas, maiorVenda: real
 
 Inicio
     escreva("Digite o valor das vendas de Janeiro: ")
@@ -16,6 +16,15 @@ Inicio
     totalVendas <- (vendasJan + vendasFev + vendasMar)
     
     escreval("O total de vendas do trimestre é: ", totalVendas)
+
+    maiorVenda <- vendasJan
+    se vendasFev > maiorVenda entao
+        maiorVenda <- vendasFev
+    fimse
+    se vendasMar > maiorVenda entao
+        maiorVenda <- vendasMar
+    fimse
+    escreval("O maior valor de vendas entre os meses foi: ", maiorVenda)
 
     se totalVendas > 17000 entao
         escreva("Parabéns! As vendas superaram a meta!")

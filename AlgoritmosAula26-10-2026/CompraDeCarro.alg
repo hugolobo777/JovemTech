@@ -1,8 +1,8 @@
 algoritmo "CompraDeCarro"
 
 var
-    cor, fabricante: caractere
-    potencia, valor: real
+cor, fabricante: caractere
+potencia, valor: real
 
 inicio
     escreva("Informe a cor do automóvel: ")
@@ -14,8 +14,8 @@ inicio
     escreva("Informe o valor do automóvel: R$ ")
     leia(valor)
 
-    // Condição simplificada e tolerante a maiúsculas/minúsculas
-se ((cor = "Azul") e (potencia = 1.8) e (fabricante = "Ford") e (valor <= 40000)) entao        escreval("Compra aprovada!")
+    se ((cor = "Azul") e (potencia = 1.8) e (fabricante = "Ford") e (valor <= 40000)) entao
+        escreval("Compra aprovada!")
     senao
         escreval("Compra não aprovada.")
     fimse

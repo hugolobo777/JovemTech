@@ -1,4 +1,4 @@
-algoritmo "CompraDeCarro"
+/* algoritmo "CompraDeCarro"
 
 var
 cor, fabricante: caractere
@@ -21,3 +21,19 @@ inicio
     fimse
 
 fimalgoritmo
+*/
+
+const prompt = require('prompt-sync')();
+let cor, fabricante;
+let potencia, valor;
+
+cor = prompt("Informe a cor do automóvel: ");
+potencia = parseFloat(prompt("Informe a potência do motor (ex: 1.0, 1.4, 1.8): "));
+fabricante = prompt("Informe o fabricante: ");
+valor = parseFloat(prompt("Informe o valor do automóvel: R$ "));
+
+if ((cor === "Azul") && (potencia === 1.8) && (fabricante === "Ford") && (valor <= 40000)) {
+    console.log("Compra aprovada!");
+} else {
+    console.log("Compra não aprovada.");
+}

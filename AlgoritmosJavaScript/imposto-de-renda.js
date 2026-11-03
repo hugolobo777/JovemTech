@@ -21,6 +21,7 @@ fimse
 fimalgoritmo
 */
 
+
 const prompt = require('prompt-sync')();
 let nome;
 let totalRendaAnual;

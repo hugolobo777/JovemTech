@@ -26,14 +26,15 @@ const prompt = require('prompt-sync')();
 let nome;
 let totalRendaAnual;
 
-console.log("Digite o nome do funcionário: ");
-nome = prompt();
+for (let i = 0; i < 5; i++) {
 
-console.log("Digite o total da renda anual do funcionário: ");
-totalRendaAnual = parseFloat(prompt());
+    nome = prompt("Digite o nome do funcionário: ");
 
-if (totalRendaAnual < 19000.00) {
-    console.log(`O funcionário ${nome} não precisa pagar imposto de renda.`);
-} else {
-    console.log(`O funcionário ${nome} precisa pagar imposto de renda.`);
+    totalRendaAnual = parseFloat(prompt("Digite o total da renda anual do funcionário: "));
+
+    if (totalRendaAnual < 19000.00) {
+        console.log(`O funcionário ${nome} não precisa pagar imposto de renda.`);
+    } else {
+        console.log(`O funcionário ${nome} precisa pagar imposto de renda.`);
+    }
 }

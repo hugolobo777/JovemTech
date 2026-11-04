@@ -10,4 +10,4 @@ while (executando) {
     "4 - Sair\n\n" +
     "Escolha uma opção (1 a 4):"
   );
-  
+}

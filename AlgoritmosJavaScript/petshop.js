@@ -31,3 +31,4 @@ while (executando) {
       alert("Preencha todos os campos para cadastrar.");
     }
   }
+}

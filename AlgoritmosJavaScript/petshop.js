@@ -16,7 +16,7 @@ while (opcao !== "4") {
 3 - Buscar por nome do dono
 4 - Sair`);
 
-  opcao = prompt(`Digite o número da opção desejada: `);
+  opcao = prompt(`\nDigite o número da opção desejada: `);
 
   // 1. CADASTRAR
   if (opcao === "1") {

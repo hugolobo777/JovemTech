@@ -16,11 +16,7 @@ while (opcao !== "4") {
 3 - Buscar por nome do dono
 4 - Sair`);
 
-<<<<<<< HEAD
   opcao = prompt(`Digite o número da opção desejada: `);
-=======
-  opcao = prompt(`\nDigite o número da opção desejada: `);
->>>>>>> 48f9df3 (chore: limpa arquivos temporarios, remove configs duplicadas e atualiza README)
 
   // 1. CADASTRAR
   if (opcao === "1") {
@@ -60,7 +56,7 @@ while (opcao !== "4") {
       console.log(`\n--- RESULTADOS PARA "${busca}" ---`);
 
       for (let i = 0; i < nomesDonos.length; i++) {
-        if (nomesDonos[i] === busca) {
+        if (nomesDonos[i].toLowerCase() === busca.toLowerCase()) {
           console.log(`Pet: ${nomesPets[i]} | Dono: ${nomesDonos[i]} | Serviço: ${servicos[i]}`);
           encontrou = true;
         }

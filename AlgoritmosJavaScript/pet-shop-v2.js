@@ -88,7 +88,7 @@ while (opcao !== "4") {
 >>>>>>> 35eb5ff (chore: limpa arquivos temporarios, remove configs duplicadas e atualiza README)
 >>>>>>> 48f9df3 (chore: limpa arquivos temporarios, remove configs duplicadas e atualiza README)
     for (let i = 0; i < nomesDonos.length; i++) {
-      if (nomesDonos[i] === busca) {
+      if (nomesDonos[i].toLowerCase() === busca.toLowerCase()) {
         console.log("Encontrado: " + nomesPets[i] + " | Serviço: " + servicos[i]);
         achou = true;
       }

@@ -8,15 +8,16 @@ let opcao = "";
 
 // O laço repete até que o usuário digite "4"
 while (opcao !== "4") {
-  console.log("\n=== PET SHOP AMIGO FIEL ===");
+  console.log("\n=== PET SHOP AMIGO FIEL ===\n");
   console.log("1 - Cadastrar pet");
   console.log("2 - Listar todos os pets");
   console.log("3 - Buscar por nome do dono");
-  console.log("4 - Sair");
+  console.log("4 - Sair\n");
   opcao = prompt("Digite o número da opção desejada: ");
 
   // 1. CADASTRAR
   if (opcao === "1") {
+    console.log("");
     let pet = prompt("Nome do pet: ");
     let dono = prompt("Nome do dono: ");
     let servico = prompt("Serviço agendado: ");
@@ -25,11 +26,12 @@ while (opcao !== "4") {
     nomesDonos.push(dono);
     servicos.push(servico);
 
-    console.log("Cadastrado com sucesso!");
+    console.log(`\nPet ${pet} cadastrado com sucesso!`);
   }
 
   // 2. LISTAR TODOS
   else if (opcao === "2") {
+    console.log("\n--- LISTA DE PETS ---");
     for (let i = 0; i < nomesPets.length; i++) {
       console.log(`Pet: ${nomesPets[i]} | Dono: ${nomesDonos[i]} | Serviço: ${servicos[i]}`);
     }
@@ -37,9 +39,10 @@ while (opcao !== "4") {
 
   // 3. Buscar pelo dono
   else if (opcao === "3") {
-    let busca = prompt("Nome do dono: ");
+    let busca = prompt("\nNome do dono: ");
     let achou = false;
 
+    console.log(`\n--- RESULTADOS PARA "${busca}" ---`);
     for (let i = 0; i < nomesDonos.length; i++) {
       if (nomesDonos[i] === busca) {
         console.log("Encontrado: " + nomesPets[i] + " | Serviço: " + servicos[i]);
@@ -54,11 +57,11 @@ while (opcao !== "4") {
 
   // 4. SAIR
   else if (opcao === "4") {
-    console.log("Saindo do sistema...");
+    console.log("\nSaindo do sistema!");
   }
 
   // OPÇÃO INVÁLIDA
   else {
-    console.log("Opção inválida! Escolha de 1 a 4.");
+    console.log("\nOpção inválida! Escolha de 1 a 4.");
   }
 }

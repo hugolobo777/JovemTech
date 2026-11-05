@@ -1,34 +1,88 @@
-let pets = [];
-let executando = true;
 
-while (executando) {
-  let opcao = prompt(
-    "=== SISTEMA DE GESTÃO PETSHOP AMIGO FIEL ===\n" +
-    "1 - Cadastrar novo pet\n" + //Hugo
-    "2 - Listar todos os pets\n" + //Jean
-    "3 - Buscar pet pelo nome do dono\n" + //Renata
+let nomesPets = [];
+let nomesDonos = [];
+let servicos = [];
+
+let opcao = "";
+
+// O laço continua repetindo até que o usuário digite "4"
+while (opcao !== "4") {
+  opcao = prompt(
+    "=== PET SHOP ===\n" +
+    "1 - Cadastrar pet\n" +
+    "2 - Listar todos os pets\n" +
+    "3 - Buscar por nome do dono\n" +
     "4 - Sair\n\n" +
-    "Escolha uma opção (1 a 4):"
+    "Digite o número da opção desejada:"
   );
 
-  // 1. CADASTRAR NOVO PET
+  // 1. CADASTRAR
   if (opcao === "1") {
-    let nomePet = prompt("Digite o nome do pet:");
-    let nomeDono = prompt("Digite o nome do dono:");
-    let servico = prompt("Digite o serviço (ex: Banho e tosa, Consulta):");
+    let pet = prompt("Nome do pet:");
+    let dono = prompt("Nome do dono:");
+    let servico = prompt("Serviço agendado:");
 
-    // Validação simples
-    if (nomePet && nomeDono && servico) {
-      // Cria o objeto e adiciona na última posição do vetor com .push()
-      let novoCadastro = {
-        pet: nomePet,
-        dono: nomeDono,
-        servico: servico
-      };
-      pets.push(novoCadastro);
-      alert("Pet " + nomePet + " cadastrado com sucesso!");
+    // Guarda cada informação no seu respectivo vetor
+    nomesPets.push(pet);
+    nomesDonos.push(dono);
+    servicos.push(servico);
+
+    alert("Cadastrado com sucesso!");
+  }
+
+  // 2. LISTAR TODOS
+  else if (opcao === "2") {
+    if (nomesPets.length === 0) {
+      alert("Nenhum pet cadastrado!");
     } else {
-      alert("Preencha todos os campos para cadastrar.");
+      let mensagem = "--- LISTA DE PETS ---\n\n";
+
+      // Percorre os vetores do índice 0 até o final
+      for (let i = 0; i < nomesPets.length; i++) {
+        mensagem += "Pet: " + nomesPets[i] + 
+                    " | Dono: " + nomesDonos[i] + 
+                    " | Serviço: " + servicos[i] + "\n";
+      }
+
+      alert(mensagem);
     }
+  }
+
+  // 3. BUSCAR POR DONO
+  else if (opcao === "3") {
+    if (nomesPets.length === 0) {
+      alert("Ainda não há pets para buscar.");
+    } else {
+      let busca = prompt("Digite o nome do dono que quer procurar:");
+      let encontrou = false;
+      let resultado = "--- RESULTADOS ENCONTRADOS ---\n\n";
+
+      // Percorre o vetor de donos comparando com o nome digitado
+      for (let i = 0; i < nomesDonos.length; i++) {
+        if (nomesDonos[i] === busca) {
+          resultado += "Pet: " + nomesPets[i] + 
+                       " | Dono: " + nomesDonos[i] + 
+                       " | Serviço: " + servicos[i] + "\n";
+          encontrou = true;
+        }
+      }
+
+      // Verifica se achou alguém
+      if (encontrou === true) {
+        alert(resultado);
+      } else {
+        alert("Nenhum cadastro encontrado com o dono: " + busca);
+      }
+    }
+  }
+
+  // 4. SAIR
+  else if (opcao === "4") {
+    alert("Saindo do sistema...");
+  }
+
+  // OPÇÃO INVÁLIDA
+  else {
+    alert("Opção inválida! Escolha de 1 a 4.");
   }
 }

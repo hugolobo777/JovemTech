@@ -9,7 +9,8 @@ O objetivo deste diretório é consolidar os fundamentos da linguagem JavaScript
 ## Conteúdos Abordados
 
 - **Lógica e Sintaxe Essencial**: Variáveis (`let`, `const`), tipos primitivos, operadores aritméticos e lógicos.
-- **Estruturas de Controle**: Condicionais (`if/else`, `switch/case`) e laços de repetição (`for`, `while`, `for...of`).
+- **Estruturas de Controle**: Condicionais (`if/else`, `switch/case`) e laços de repetição (`for`, `while`, `do...while`).
+- **Estruturas de Dados (Vetores)**: Manipulação de arrays (`push`, `pop`, `shift`, `unshift`, `splice`, `concat`, `filter`, `for...in`, `for...of`).
 - **Resolução de Algoritmos**: Exercícios de fixação, validações de dados e lógica aplicada a cenários reais.
 
 ---
@@ -20,16 +21,19 @@ O objetivo deste diretório é consolidar os fundamentos da linguagem JavaScript
 ![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=git&logoColor=white)
 
-- **Linguagem:** JavaScript (ES6+)
-- **Ambiente de Execução:** Node.js / Navegador
+- **Linguagem:** JavaScript (ES6+) e Portugol (Visualg)
+- **Ambiente de Execução:** Node.js / Terminal
 - **Editor:** Visual Studio Code
 
 ---
 
-## Estrutura do Diretório
+## Estrutura do Repositório
 
 ```plaintext
-AlgoritmosJavaScript/
-│
-├── exercicios/          # Scripts práticos e desafios de lógica
-└── README.md            # Documentação deste módulo
+JovemTech/
+├── AlgoritmosAula26-10-2026/   # Algoritmos base em Portugol (Visualg)
+├── AlgoritmosJavaScript/       # Exercícios práticos e desafios de lógica em JS
+├── Vetores-JavaScript/         # Manipulação de vetores (arrays) e métodos nativos
+├── package.json                # Dependências do projeto (prompt-sync)
+└── README.md                   # Documentação principal
+```

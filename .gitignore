@@ -7,6 +7,7 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+tempCodeRunnerFile*
 
 # Python (caches e ambientes virtuais)
 __pycache__/
@@ -32,6 +33,6 @@ target/
 .gradle/
 build/
 
-# Pacotes e dependências (Node/JS se usar)
+# Pacotes e dependências (Node/JS)
 node_modules/
 dist/

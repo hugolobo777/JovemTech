@@ -16,7 +16,7 @@ while (opcao !== "4") {
 3 - Buscar por nome do dono
 4 - Sair
 
-Digite o número da opção desejada:`);
+Digite o número da opção desejada: `);
 
   // 1. CADASTRAR
   if (opcao === "1") {
@@ -49,7 +49,7 @@ Digite o número da opção desejada:`);
     if (nomesPets.length === 0) {
       console.log("Ainda não há pets para buscar.");
     } else {
-      let busca = prompt("Digite o nome do dono que quer procurar:v");
+      let busca = prompt("Digite o nome do dono que quer procurar: ");
       let encontrou = false;
 
       console.log(`--- RESULTADOS PARA "${busca}" ---`);

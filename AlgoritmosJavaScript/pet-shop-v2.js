@@ -1,0 +1,79 @@
+const prompt = require('prompt-sync')();
+
+// três vetores, cada índice = um pet, dono e serviço
+let nomesPets = [];
+let nomesDonos = [];
+let servicos = [];
+
+let opcao = "";
+
+// Laço repete até que o usuário digite "4"
+while (opcao !== "4") {
+  opcao = prompt(`=== PET SHOP AMIGO FIEL ===
+
+1 - Cadastrar pet
+2 - Listar todos os pets
+3 - Buscar por nome do dono
+4 - Sair
+
+Digite o número da opção desejada:`);
+
+  // 1. CADASTRAR
+  if (opcao === "1") {
+    let pet = prompt("Nome do pet: ");
+    let dono = prompt("Nome do dono: ");
+    let servico = prompt("Serviço agendado: ");
+
+    nomesPets.push(pet);
+    nomesDonos.push(dono);
+    servicos.push(servico);
+
+    console.log(`Pet ${pet} cadastrado com sucesso!`);
+  }
+
+  // 2. LISTAR TODOS
+  else if (opcao === "2") {
+    if (nomesPets.length === 0) {
+      console.log("Nenhum pet cadastrado!");
+    } else {
+      console.log("--- LISTA DE PETS ---");
+
+      for (let i = 0; i < nomesPets.length; i++) {
+        console.log(`Pet: ${nomesPets[i]} | Dono: ${nomesDonos[i]} | Serviço: ${servicos[i]}`);
+      }
+    }
+  }
+
+  // 3. BUSCAR POR DONO
+  else if (opcao === "3") {
+    if (nomesPets.length === 0) {
+      console.log("Ainda não há pets para buscar.");
+    } else {
+      let busca = prompt("Digite o nome do dono que quer procurar:v");
+      let encontrou = false;
+
+      console.log(`--- RESULTADOS PARA "${busca}" ---`);
+
+      for (let i = 0; i < nomesDonos.length; i++) {
+        if (nomesDonos[i] === busca) {
+          console.log(`Pet: ${nomesPets[i]} | Dono: ${nomesDonos[i]} | Serviço: ${servicos[i]}`);
+          encontrou = true;
+        }
+      }
+
+      if (encontrou === false) {
+        console.log(`Nenhum cadastro encontrado com o dono: ${busca}`);
+      }
+    }
+  }
+
+  // 4. SAIR
+  else if (opcao === "4") {
+    console.log("Saindo do sistema!");
+  }
+
+  // OPÇÃO INVÁLIDA
+  else {
+    console.log("Opção inválida! Escolha de 1 a 4.");
+  }
+}
